@@ -92,3 +92,15 @@ TIMESTAMP
 select age(timestamp '1957-06-13');
 
 
+SCHEMAS
+
+
+ create table myschema.company(
+   ID   INT              NOT NULL,
+   NAME VARCHAR (20)     NOT NULL,
+   AGE  INT              NOT NULL,
+   ADDRESS  CHAR (25),
+   SALARY   DECIMAL (18, 2),
+   PRIMARY KEY (ID)
+);
+
