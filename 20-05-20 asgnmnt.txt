@@ -1,0 +1,87 @@
+create or replace function change_log()
+returns trigger as
+$BODY$
+BEGIN
+if new.address<>old.address then
+INSERT INTO employee values(old.id,old.address,new.id,new.address);
+end if;
+return new;
+end;
+$BODY$
+LANGUAGE 'plpgsql';
+
+
+
+
+create trigger loc_changer
+before update
+on employee
+for each row
+execute procedure change_log();
+
+
+
+update employee set address='india' where id=3;
+
+
+
+INDEX
+
+
+create index emp_index on employee("name")
+
+
+
+
+explain select * from employee where name='Teddy'
+
+
+
+drop index emp_index;
+
+
+JOINS
+
+
+
+select company.id,company.name from company inner join employee on company.id=employee.id
+
+select company.id,company.name from company left outer join employee on company.id=employee.id
+
+
+
+UNION
+
+select company.id,company.name from company inner join employee on company.id=employee.id
+union
+select company.id,company.name from company left outer join employee on company.id=employee.id
+
+
+
+
+Transaction
+
+---------------
+
+
+insert into company(2,'arun',24,'kottayam',25000)
+
+
+insert into company(3,'amal',23,'kottayam',24000)
+
+begin;
+
+delete from company where id=3
+
+
+rollback;
+
+listing deleted data 
+
+
+
+
+
+
+
+

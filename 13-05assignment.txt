@@ -1,0 +1,67 @@
+
+class car:
+
+    def __init__(self,speed,distance):
+
+        self.speed=speed
+        self.distance = distance
+        
+def altofunc(num1, num2):
+    return num2*10
+
+
+def swiftfunc(num1, num2):
+    return num2*12
+
+def innovafunc(num1, num2):
+    return num2*14
+
+
+def indicafunc(num1, num2):
+    return num2*13
+
+
+print("Please select your car -\n" 
+      "1. Alto\n" 
+      "2. Swift\n" 
+      "3. Innova\n" 
+      "4. Indica\n")
+
+select = int(input("Select any car from this 1, 2, 3, 4 :"))
+
+number_1 = int(input("Enter speed:"))
+number_2 = int(input("Enter distance: "))
+
+if select == 1:
+
+    print("Dear Customer, Your Total fare =Rs",
+
+          altofunc(number_1, number_2))
+
+elif select == 2:
+    print( "Dear Customer, Your Total fare =Rs",
+          swiftfunc(number_1, number_2))
+
+elif select == 3:
+    print("Dear Customer, Your Total fare =Rs",
+          innovafunc(number_1, number_2))
+
+elif select == 4:
+    print("Dear Customer, Your Total fare =Rs",
+          indicafunc(number_1, number_2))
+else:
+    print("Invalid input")
+
+
+OUTPUT
+
+Please select your car -
+1. Alto
+2. Swift
+3. Innova
+4. Indica
+
+Select any car from this 1, 2, 3, 4 :2
+Enter speed:3
+Enter distance: 4
+Dear Customer, Your Total fare =Rs 48

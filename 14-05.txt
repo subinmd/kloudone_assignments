@@ -1,0 +1,116 @@
+import random
+
+name = input("What is your name? ")
+
+print("Good Luck ! ", name)
+
+countries = ['india', 'australia', 'pakistan', 'england',
+         'canada', westindies', 'srilanka', 'ireland',
+         'italy', 'germany', 'spain', 'argentina']
+
+word = random.choice(countries)
+
+print("Guess the characters")
+
+guesses = ''
+
+
+turns = 12
+
+while turns > 0:
+
+    failed = 0
+
+    for char in word:
+
+
+        if char in guesses:
+            print(char)
+
+        else:
+            print("_")
+
+    
+            failed += 1
+
+    if failed == 0:
+
+        print("You Win")
+
+
+        print("The country is: ", word)
+        break
+
+    guess = input("guess a country:")
+
+    guesses += guess
+
+
+    if guess not in word:
+
+        turns -= 1
+
+        print("Wrong")
+
+ 
+        print("You have", + turns, 'more guesses')
+
+        if turns == 0:
+            print("You Loose")
+
+
+output
+
+
+What is your name? subin
+Good Luck !  subin
+Guess the countries
+_
+_
+_
+_
+_
+_
+guess a country:india
+Wrong
+You have 11 more guesses
+_
+a
+n
+a
+d
+a
+guess a country:c
+c
+a
+n
+a
+d
+a
+You Win
+The country is:  canada
+
+------------------------------------------------------------
+Read csv file using pandas
+
+import pandas as df
+
+data=df.read.csv(r'D:\demo.csv')
+
+print(data)
+
+Output
+
+  name age   nationality  
+  subin  23  indian  
+
+
+
+
+----------------------------------------------------------
+
+
+
+
+
+

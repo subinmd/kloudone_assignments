@@ -1,0 +1,87 @@
+DDL
+
+CREATE
+
+CREATE DATABASE database_name;
+
+database_name: name of the database.
+
+
+CREATE DATABASE my_database;
+
+
+CREATE TABLE Students
+(
+ROLL_NO int(3),
+NAME varchar(20),
+SUBJECT varchar(20),
+);
+
+
+
+
+DROP
+
+DROP DATABASE student_data; 
+
+
+Truncate
+
+TRUNCATE TABLE Student_details;
+
+
+ALTER
+
+
+ ALTER TABLE Student ADD (AGE number(3),COURSE varchar(40));
+
+
+
+COMMENTS
+
+
+
+/* multi line comment
+another comment */
+SELECT * FROM Customers; 
+
+
+-- single line comment
+-- another comment
+SELECT * FROM Customers; 
+
+
+
+
+ALTER
+
+
+ALTER TABLE Student RENAME COLUMN NAME TO FIRST_NAME;
+
+
+
+
+
+DML
+
+
+
+INSERT
+
+
+INSERT INTO Student VALUES (‘5′,’HARSH’,’WEST BENGAL’,’XXXXXXXXXX’,’19’);
+
+
+UPDATE Student SET NAME = 'PRATIK' WHERE Age = 20;
+
+
+
+DELETE FROM table_name WHERE some_condition;
+
+table_name: name of the table
+some_condition: condition to choose particular record.
+
+
+DELETE FROM Student WHERE NAME = 'Ram';
+
+

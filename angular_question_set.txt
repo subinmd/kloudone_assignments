@@ -1,0 +1,797 @@
+ANGULAR 
+
+QUESTION-SET1
+
+1.	Do Angularjs provide reusable components?
+
+A - false
+B - true
+Answer : B
+
+2.	What is two-way binding?
+Two-way binding means that when data in the view is changed the underlying model gets updated automatically and when a model from the controller is changed the view gets updated.
+
+3.	What is MVC?
+Ans: Model View Controller or MVC as it is popularly called, is a software design pattern for developing web applications. A Model View Controller pattern is made up of the following three parts
+•	Model − It is the lowest level of the pattern responsible for maintaining data.
+•	View − It is responsible for displaying all or a portion of the data to the user.
+•	Controller − It is a software Code that controls the interactions between the Model and View.
+4.	What is NPM?
+Node package manager
+5.	How to Create an Angular App with the CLI?
+
+ng new my-first-app
+6.	How we can run the Angular app ?
+
+ANS: ng serve –open
+
+7.	What is constant?
+constants are used to pass values at config phase considering the fact that value cannot be used to be passed during config phase.
+
+mainApp.constant("configParam", "constant value");
+
+
+8.	What is the syntax of ForEach loop?
+Angular.ForEach(students,function(value,key)
+{
+//code
+}
+9.	Can there be two ng-app for a single angular application?
+No, there can't be more than one ng-apps for a single AngularJS application.
+The ng-app directive conveys AngularJS application that it is the root element. In your HTML document, you can have a single ng-app directive only. In case of more than one ng-app directives, the first appearance will be used.
+10.	What is $scope?
+$scope is a model for a controller and helps the controller in interacting with the view.
+11.	Name a few inbuilt angular filters?
+Currency, lowercase, uppercase, number, date are few inbuilt angular filters.
+12.	What is the difference between ng-if and ng-show?
+Ng-if doesn’t render the portion of DOM element on which it is associated if the specified condition is not met whereas ng-show renders the DOM element but set its CSS property of display to none if the specified condition is not met.
+13.	What is the purpose of the $watch?
+The purpose of $watch is to keep track of the old and new value of the watched expression. Below is the code of using $watch.
+14.	What is the purpose of $rootScope?
+$rootScope helps in communication between different controllers of an application. AngularJS can have only one rootScope for an app.
+15.	What is ng-init used for?
+Ng-init is used in a scenario where we want some action to be done before the initialization of a portion of the DOM element.
+16.	What is the purpose of find index in AngularJS and what does it return if no value is found?
+Find index returns the position of an element in an object. If the requested element is not found then -1 is returned.
+var index = $scope.items.findIndex(record => record.date =='2018-12-12');
+17.	Explain the following code:
+<div ng-repeat="hotel in hotels|filter:setFinalFilter|orderBy : 'minPrice'">{{hotel.name}}</div>
+
+		Here, setFinalFilter is a custom filter used on the hotels object. The result would display the name of filtered hotels in ascending order of their minPrice.
+18.	What is service in AngularJS used for?
+Services in AngularJS are objects which are used to communicate within entire applications.
+app.service('sharedData', function () {
+ //methods to get and set variable
+    });
+19.	Write down the syntax of creating a new date object?
+$scope.newDate=new Date();
+
+20.	Can parent controller access the methods of child controller or vice versa?
+No, the parent controller cannot access the methods of child controller, but the child controller can access the methods of the parent controller.
+
+21.	What is internationalization?
+
+Internationalization is a way to show locale specific information on a website. For example, display content of a website in English language in United States and in Danish in France.
+22.	AngularJS application expressions are pure JavaScript expressions.
+A - true
+B - false
+	Answer : A
+23.	Which of the following is true about $error?
+A - $error states that form has invalid data.
+B - $error states the exact error.
+C - Both of the above.
+D - None of the above.
+Answer : B
+24.	Child controller inherits the scope of its parent controller.
+A - true
+B - false
+Answer : A
+
+25.	ng-bind binds the AngularJS Application data to HTML tags.
+A - true
+B - false
+Answer : A
+26.	What are Angular expressions?
+
+Angular expressions are code snippets that are usually placed in binding such as {{ expression }} similar to JavaScript. These expressions are used to bind application data to HTML
+Syntax: {{ expression }}
+
+27.	What are directives in Angular?
+A core feature of Angular, directives are attributes that allow you to write new HTML syntax, specific to your application. They are essentially functions that execute when the Angular compiler finds them in the DOM.  The Angular directives are segregated into 3 parts:
+1.	Component Directives
+2.	Structural Directives
+3.	Attribute Directives.
+
+
+28.	What is a provider in Angular?
+A provider is a configurable service in Angular. It is an instruction to the Dependency Injection system that provides information about the way to obtain a value for a dependency. It is an object that has a $get() method which is called to create a new instance of a service. A Provider can also contain additional methods and uses $provide in order to register new providers.
+
+29.	How can you initialize a select box with options on page load?
+You can initialize a select box with options on page load by using ng-init directive.
+•	<div ng-controller = " apps/dashboard/account " ng-switch
+•	On = "! ! accounts" ng-init = " loadData ( ) ">
+
+30.	What are directives? Name some of the most commonly used directives in AngularJS application
+•	A directive is something that introduces new syntax. They are like markers on the DOM element, which attaches a special behavior to it. In any AngularJS application, directives are the most important components.
+•	Some of the commonly used directives are:
+•	1) ng-model
+•	2) ng-App
+•	3) ng-bind
+•	4) ng-repeat
+•	5) ng-show
+31.	What are the benefits of AngularJS?
+Benefits of AngularJS are:
+•	Registering Callbacks: There is no need to register callbacks. This makes your code simple and easy to debug.
+•	Control HTML DOM programmatically: Applications which are created using Angular are not required to manipulate the DOM.
+•	Transfer data to and from the UI: AngularJS helps to eliminate almost all of the boilerplate. It can validate the form, display errors, return to an internal model, and so on.
+•	No initialization code: With AngularJS, you can bootstrap your app easily. You can use auto injected services into your application in Guice.
+32.	What is string interpolation in Angular.JS ?
+•	In Angular.js, the compiler during the compilation process matches text and attributes. It uses interpolate service to see if they contain embedded expressions. As part of the normal digest cycle, these expressions are updated and registered as watches.
+33.	Explain directives and their types
+•	During compilation process, when specific HTML function is triggered, it is referred to as directive. It is executed when the compiler encounters it in the DOM.
+•	Different types of directives are:
+•	1) Element directives
+•	2) Attribute directives
+•	3) CSS class directives
+•	4) Comment directives.
+Link combines the directives with a scope and produces a live view. For registering DOM listeners as well as for updating the DOM, link function is responsible. After the template is cloned, it is executed.
+34.	Explain the linking function and its types
+
+•	Pre-linking function: Pre-linking function is executed before the child elements are linked. It is not considered as a safe way for DOM transformation.
+•	Post linking function: Post linking function is executed after the child elements are linked. It is safe to do DOM transformation by post-linking function.
+35.	What is the main difference between a link and compile in Angular.js?
+•	Compile function: It is used for template DOM manipulation and collects all of the directives.
+•	Link function: It is used for registering DOM listeners as well as for instance, DOM manipulation. It is executed once the template has been cloned.
+
+36.	Who created Angular JS?
+•	AngularJS was developed by Adam Abrons and Misko Hevery. Currently, it is developed by Google.
+37.	How can you integrate AngularJS with HTML?
+•	Developers can follow the following steps to integrate AngularJS with HTML:
+•	Step 1: including AngularJS JavaScript in html page.
+<head>
+   <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+
+38.	Point out AngularJS application.
+You have to add ng-app attribute inside HTML body tag to tell what part of HTML AngularJS app has as shown in the following example:
+<body ng-app = "testapp">
+</body>
+
+39.	What is orderby filter in AngularJS?
+Orderby filter in AngularJS orders the array based on specified criteria. Following example states how you can order product by price.
+<ul>
+<li ng-repeat = "company in product.products | orderBy:'price">
+      {{ company.product + ', price:' + product.price }}
+   </li>
+</ul>
+
+40.	What is ng-non-bindable in AngularJS?
+Ng-non-bindable specifies AngularJs to not compile the HTML element and its child nodes. For example:
+<title ng-non-bindable > </title>
+41.	In AngularJS, Scope contains the model data.
+A - true
+B - false
+Answer : A
+
+42.	Explain basic steps to set up an Angular JS app?
+
+•	Create an angular.module
+•	Assign a controller to the module
+•	Link your module to HTML with ng-app
+•	Link the controller to HTML with ng-controller directive
+
+
+43.	 What is Angular JS ?
+
+AngularJS is a JavaScript framework that is used for making rich, extensible web applications. It runs on plain JavaScript and HTML, so you don’t need any other dependencies to make it work.AngularJS is perfect for Single Page Applications (SPA). It is basically used for binding JavaScript objects with HTML UI elements.
+
+44.	Define the features of AngularJS.
+Answer: The features include:
+•	The Template (View)
+•	The Scope (Model)
+•	The Controller (Controller)
+•	Services
+•	Filters
+•	Directives
+
+45.	Define Data Binding.
+•	Answer: Data binding is an automatic attunement of data between the view and model components.
+
+46.	What are the Angular Modules?
+Answer: The angular modules collectively define an angular application where we can write the angular code. Modules contain the different parts of an angular application. A module is created by angular.module function in angular.
+
+47.	What is the digest cycle in AngularJs?
+Answer: It is a part of the process of data binding in AngularJS. It compares the old and new versions of the scope model value in each digest cycle.
+The digest cycle is triggered automatically. We can also enhance the usability by using $apply () if we want to trigger the digest cycle manually.
+
+48.	Difference between sessionStorage, cookies, and localStorage.
+Answer: The differences are as follows:
+•	SessionStorage – The data is stored for a particular session. The data will be lost whenever the browser tab will be closed or after some particular session. The maximum size stored can be up to 5MB.
+•	LocalStorage – The data is stored with no expiration date. The data can only be cleared by JavaScript or by clearing the browser cache. The storage limit is maximum than the sessionStorage and cookie.
+•	Cookies – It stores the data that has to be sent back to the server with some requests. The cookie's expiration varies on the type and duration set from either the server-side or client-side. The maximum size stored can be less than 4KB.
+
+49.	What is the role of $routeProvider in AngularJS?
+Answer: It is the $routeProvider that helps in navigating between different pages/links without separately loading the page/link whenever a user clicks on a link.
+ngRoute config() method is used to configure the routeProvider.
+
+50.	What is SPA (Single Page Application) in AngularJS?
+Answer: It is a web application that loads a single HTML page and dynamically updates the page as the user connects with the app.
+By using AJAX and HTML a fluid and responsive web app can be created by SPA without invariant page reloads. Through this, we can make responsive UI with no page flicker.
+
+
+
+QUESTION SET-2
+1.	Explain ng-bind-template and ng-non-bindable.
+Answer:
+ng-bind-template: It replaces the text content of the element by interpolation of the template. It can contain multiple double curly markups.
+<ANY ELEMENT ng-bind-template= " {{expression1}} {{expression2}} … {{expression n}} "> </ANY ELEMENT>
+Ng-non-bindable: It specifies AngularJS to not compile the content of this HTML element and its child nodes.
+<ANY ELEMENT ng-non-bindable > </ANY ELEMENT>
+2.	Does Angular support nested controllers?
+Yes, Angular does support the concept of nested controllers. The nested controllers are needed to be defined in a hierarchical manner for using it in the View. 
+
+3.	List at down the ways in which you can communicate between applications modules using core Angular functionality.
+Below are the most general ways for communicating between application modules using core Angular functionality :
+•	Using events
+•	Using services
+•	By assigning models on $rootScope
+•	Directly between controllers [$parent, $$childHead, $$nextSibling, etc.]
+•	Directly between controllers [ControllerAs, or other forms of inheritance]
+4.	What is the difference between a service() and a factory()?
+A service() in Angular is a function that is used for the business layer of the application. It operates as a constructor function and is invoked once at the runtime using the ‘new’ keyword. Whereas factory() is a function which works similar to the service() but is much more powerful and flexible. factory() are design patterns which help in creating Objects.
+
+5.	What is the difference between $scope and scope in Angular?
+•	$scope in Angular is used for implementing the concept of dependency injection (D.I) on the other hand scope is used for directive linking.
+•	$scope is the service provided by $scopeProviderwhich can be injected into controllers, directives or other services whereas Scope can be anything such as a function parameter name, etc.
+6.	Explain the concept of scope hierarchy?
+The $scope objects in Angular are organized into a hierarchy and are majorly used by views. It contains a root scope which can further contain scopes known as child scopes. One root scope can contain more than one child scopes. Here each view has its own $scope thus the variables set by its view controller will remain hidden to the other controllers. The Scope hierarchy generally looks like:
+•	Root $scope
+o	$scope for Controller 1
+o	$scope for Controller 2
+o	..
+o	$scope for Controller ‘n’
+
+7.	What is AOT?
+AOT stands for Angular Ahead-of-Time compiler. It is used for pre-compiling the application components and along with their templates during the build process. Angular applications which are compiled with AOT has a smaller launching time. Also, components of these applications can execute immediately, without needing any client-side compilation. Templates in these applications are embedded as code within their components. It reduces the need for downloading the Angular compiler which saves you from a cumbersome task. AOT compiler can discard the unused directives which are further thrown out using a tree-shaking tool.
+
+8.	Explain jQLite.
+jQlite is also known as jQuery lite is a subset of jQuery and contains all its features. It is packaged within Angular, by default. It helps Angular to manipulate the DOM in a way that is compatible cross-browser. jQLite basically implements only the most commonly needed functionality which results in having a small footprint.
+
+9.	On which types of the component can we create a custom directive?
+Angular provides support to create custom directives for the following:
+•	Element directives − Directive activates when a matching element is encountered.
+•	Attribute − Directive activates when a matching attribute is encountered.
+•	CSS − Directive activates when a matching CSS style is encountered.
+•	Comment − Directive activates when a matching comment is encountered
+10.	What do you understand by dirty checking in Angular?
+In Angular, the digest process is known as dirty checking. It is called so as it scans the entire scope for changes. In other words, it compares all the new scope model values with the previous scope values. Since all the watched variables are contained in a single loop, any change/update in any of the variable leads to reassigning of rest of the watched variables present inside the DOM. A watched variable is in a single loop(digest cycle), any value change of any variable forces to reassign values of other watched variables in DOM
+
+11.	What is Transpiling in Angular?
+Transpiling in Angular refers to the process of conversion of the source code from one programming language to another. In Angular, generally, this conversion is done from TypeScript to JavaScript. It is an implicit process and happens internally.
+
+12.	How to perform animation in Angular?
+In order to perform animation in an Angular application, you need to include a special Angular library known as Animate Library and then refer to the ngAnimate module into your application or add the ngAnimate as a dependency inside your application module.
+13.	What is transclusion in Angular?
+The transclusion in Angular allows you to shift the original children of a directive into a specific location within a new template. The ng directive indicates the insertion point for a transcluded DOM of the nearest parent directive that is using transclusion. Attribute directives like ng-transclude or ng-transclude-slot are mainly used for transclusion
+
+14.	What are events in Angular?
+Events in Angular are specific directives that help in customizing the behavior of various DOM events. Few of the events supported by Angular are listed below:
+•	ng-click
+•	ng-copy
+•	ng-cut
+•	ng-dblclick
+•	ng-keydown
+•	ng-keypress
+•	ng-keyup
+•	ng-mousedown
+•	ng-mouseenter
+•	ng-mouseleave
+•	ng-mousemove
+•	ng-mouseover
+•	ng-mouseup
+•	ng-blur.
+15.How to create a service in Angular?
+In Angular, a service is a substitutable object that is wired together using dependency injection. A service is created by registering it in the module it is going to be executed within. There are basically three ways in which you can create an angular service. They are basically three ways in which a service can be created in Angular:
+•	Factory
+•	Service
+•	Provider
+16.	List some tools for testing angular applications?
+1.	Karma
+2.	Angular Mocks
+3.	Mocha
+4.	Browserify
+5.	Sion
+17.	What do you understand by REST in Angular?
+REST stands for REpresentational State Transfer. REST is an API (Application Programming Interface) style that works on the HTTP request. In this, the requested URL pinpoints the data that needs to be processed. Further ahead, an HTTP method then identifies the specific operation that needs to be performed on that requested data. Thus, the APIs which follows this approach are known as RESTful APIs.
+
+18.	What is bootstrapping in Angular?
+Bootstrapping in Angular is nothing but initializing, or starting the Angular app. Angular supports automatic and manual bootstrapping.
+•	Automatic Bootstrapping: this is done by adding the ng-app directive to the root of the application, typically on the tag or tag if you want angular to bootstrap your application automatically. When Angular finds ng-app directive, it loads the module associated with it and then compiles the DOM.
+•	Manual Bootstrapping: Manual bootstrapping provides you more control on how and when to initialize your Angular application. It is useful where you want to perform any other operation before Angular wakes up and compile the page.
+
+19.	What is the difference between a link and compile in Angular?
+•	Compile function is used for template DOM Manipulation and to collect all the directives.
+•	Link function is used for registering DOM listeners as well as instance DOM manipulation and is executed once the template has been cloned.
+
+20.	What are Angular Global APIs?
+Angular Global API is a combination of global JavaScript functions for performing various common tasks like:
+•	Comparing objects
+•	Iterating objects
+•	Converting data
+
+21.	How do Observables differ from Promises?
+Answer: As soon as a promise is made, the execution takes place. However, this is not the case with observables because they are lazy. This means that nothing happens until a subscription is made. While promises handle a single event, observable is a stream that allows passing of more than one event. A callback is made for each event in an observable.
+
+
+22.	What should replace the “?”?
+Answer: Directives. The image represents the types of directives in Angular; Attribute, structural, and custom.
+23.	Explain the difference between an Annotation and a Decorator in Angular?
+Answer: In Angular, annotations are used for creating an annotation array. They are only metadata set of the class using the Reflect Metadata library.
+
+24.	Please explain the differences between Angular and jQuery?
+Answer: The single biggest difference between Angular and jQuery is that while the former is a JS frontend framework, the latter is a JS library. Despite this, there are some similarities between the two, such as both features DOM manipulation and provides support for animation.
+Nonetheless, notable differences between Angular and jQuery are:
+•	Angular has two-way data binding, jQuery does not
+•	Angular provides support for RESTful API while jQuery doesn’t
+•	jQuery doesn’t offer deep linking routing though Angular supports it
+•	There is no form validation in jQuery whereas it is present in Angular
+
+25.	What is Angular Material?
+Answer: It is a UI component library. Angular Material helps in creating attractive, consistent, and fully functional web pages as well as web applications. It does so while following modern web design principles, including browser portability and graceful degradation.
+26.	Can you draw a comparison between the service() and the factory() functions?
+Answer: Used for the business layer of the application, the service() function operates as a constructor function. The function is invoked at runtime using the new keyword.
+
+Although the factory() function works in pretty much the same way as the service() function does, the former is more flexible and powerful. In actual, the factory() function are design patterns that help in creating objects.
+
+27.	What is new in Angular 6?
+Answer: Here are some of the new aspects introduced in Angular 6:
+•	Angular Elements – It allows converting Angular components into web components and embeds the same in some non-Angular application
+•	Tree Shakeable Provider – Angular 6 introduces a new way of registering a provider directly inside the @Injectable() decorator. It is achieved by using the providedIn attribute
+•	RxJS 6 – Angular 6 makes use of RxJS 6 internally
+•	i18n (internationalization) – Without having to build the application once per locale, any Angular application can have “runtime i18n”.
+
+28.	What is ngOnInit()? How to define it?
+Answer: ngOnInit() is a lifecycle hook that is called after Angular has finished initializing all data-bound properties of a directive. It is defined as
+Interface OnInit {
+ ngOnInit() : void
+ }
+
+
+29.	What is the process called by which TypeScript code is converted into JavaScript code?
+Answer: It is called Transpiling. Even though TypeScript is used for writing code in Angular applications, it gets internally transpiled into equivalent JavaScript.
+
+30.	What is ViewEncapsulation and how many ways are there do to do it in Angular?
+Answer: To put simply, ViewEncapsulation determines whether the styles defined in a particular component will affect the entire application or not. Angular supports 3 types of ViewEncapsulation:
+•	Emulated – Styles used in other HTML spread to the component
+•	Native – Styles used in other HTML doesn’t spread to the component
+•	None – Styles defined in a component are visible to all components of the application.
+
+31.	Service Level Changes 
+•	If in an earlier version, the user wanted to provide a service to the entire application, the user was required to add it to providers in the AppModule but it is not required in the case of Angular6. 
+31.	Explain Authentication and Authorization.
+Authentication: The user login credentials are passed to an authenticate API (on the server). On the server side validation of the credentials happens and a JSON Web Token (JWT) is returned. JWT is a JSON object that has some information or attributes about the current user. Once the JWT is given to the client, the client or the user will be identified with that JWT.
+Authorization: After logging in successfully, the authenticated or genuine user does not have access to everything. The user is not authorized to access someone else’s data, he/she is authorized to access some data.
+32.	What is Redux?
+It is a library which helps us maintain the state of the application. Redux is not required in applications that are simple with the simple data flow, it is used in Single Page Applications that have complex data flow.
+
+33.	What are the Pipes?
+This feature is used to change the output on the template; something like changing the string into uppercase and displaying it on the template. It can also change Date format accordingly.
+34.	Differentiate between ng-Class and ng-Style.
+In ng-Class, loading of CSS class is possible; whereas, in ng-Style we can set the CSS style.
+
+35.	What is the process to convert TypeScript code into JavaScript code?
+Ans: The Typescript code is not understandable by the browsers. So, the typescript code is compiled and translated into the javascript code; this process is called trans-piled.
+
+36.	What is ViewEncapsulation and how many ways are there to do it in Angular?
+
+ViewEncapsulation identifies the component styles and demonstrate that whether the particular component will affect the entire application or not. It also enables us to use the DOM shadow. Angular provides 3 types of ViewEncapsulation.
+ViewEncapsulation.none: It defines the component style that is visible to all components of the application.
+ViewEncapsulation.emulated: Styles are used in other HTML, spread the components.
+ViewEncapsulation.native: Styles are used in other HTML but does not spread the components.
+
+37.	What is metadata?
+Ans: Angular metadata is used to decorate a class that demonstrates the expected behavior of the class. The following are various parts of the metadata. 
+
+38.	What is a parameterized pipe?
+Ans: In angular, pipes can take multiple parameters to tune the fine output.  The parameterized pipe can develop by declaring the pipe with colon(:) and then parameter 
+values. User can declare multiple parameter values by separating each value with the colon(:).
+Let’s quickly build simple pipe example to see it’s action. 
+{{today | date:'MM-dd-yyyy' }}
+In the below code there are multiple parameter values, that are seperated with the colons.
+{{salary | currency:'USD':true}}
+
+
+39.	Describe how will you set, get and clear cookies, in Angular?
+For using cookies in Angular, you need to include a  module called ngCookies angular-cookies.js.
+
+To set Cookies: For setting the cookies in a key-value format ‘put’ method is used.
+cookie.set('nameOfCookie',"cookieValue");
+To get Cookies: For retrieving the cookies ‘get’ method is used.
+cookie.get(‘nameOfCookie’);
+To clear Cookies: For removing cookies ‘remove’ method is used.
+cookie.delete(‘nameOfCookie’);
+
+40.	Explain about Routing?
+Ans: Routing is a process of merging views. The controller decides which view should be merged based on the logical need.
+
+41.	Explain the AngularJs boot process?
+Ans: When a page has loaded in the browser, the following process takes place:
+•	An HTML document of the page is loaded and evaluated by the web browser. A Javascript file is loaded and the global object is created. Later controller functions are executed, which are registered by Javascript.
+•	Here Javascript scans views and apps through HTML, once the view is scanned, then it is connected with the controller function.
+•	Then AngularJs shows the controller functions with views and data handled by the controller. Finally, the page gets ready.
+42.	What are the directives in Angular2?
+Ans: A directive is an element that is used to customize HTML code. The important directives in Angular 2 are:
+ngIF-  If it is true then the elements are added to the HTML code, either elements are not added to the code.
+ngFOR- It is used to get a temporary variable from the variable list.
+
+43.	What is ECMAScript?
+Ans: ECMAScript stands for European Computer Manufacturer’s Association and it is a standard for scripting languages. It is a subset of Javascript. Javascript and Actionscript use ECMAScript as its core language. Developers commonly use ECMAScript for client-side scripting on the world wide web and also it is used for server services and applications. ECMAScript includes dynamic, functional, prototype, and structured features.
+44.	What is a Traceur Compiler?
+Ans: Traceur compiler takes generators, classes and other features from ECMAScript and compiles it into the JavaScript ES5 that runs on the browser. This means developers can utilize the code from updated version which has more number of features and design patterns.
+
+45.	How to convert a string into currency?
+Ans: To convert a string input into a currency type we use currency filter in Angular 2.
+Here is an example of adding a currency filter by using pipe character to the expression
+The currency of this expression is{{ new value/  currency}}
+46.	What is bazel in Angular 8?
+Ans: Bazel is a new feature in Angular 8 and it builds a new system that available for a short period of time. It provides a platform to make your frontend and backend with a similar tool. 
+47.	What are the features of Bazel?
+Ans: The following are the main features of Bazel:
+•	It is an internal build tool, through which application can be customized.
+•	It also tests the action and performance of multiple machines.
+•	It constructs a graph through which you can identify the useful information.
+•	It also supports customization.runGuardsAndResolvers 
+
+48.	How to share global data across components?
+Answer: We often use `window` instance to grow also set global variables. In the browser program, `glass` is a single global setting thing. In the opposite view, Node.js. Use `GlobalRef` in elements. All done! Let’s use data: any; tagged Data Science. State oversize: creating the entire data science project.
+
+49.	What is dependency injection in Web API?
+Answer: The container automatically figures out the dependency relations. Common IoC cases also enable you to control things like objective lifetime and scope. “IoC” transfers for “inversion of power”, which is a common design anywhere a framework requests into request code
+
+50.	What is angular JSON?
+Answer: An Angular Application Environment is JSON form data that tells that build system which records to change at you apply ng build and ng serve. Let’s say you have a final end REST API deployed toward a server that gives services to your Angular form.
+
+
+
+
+
+
+
+
+
+QUESTION SET-3
+1.	what is Pure Functions?
+Pure Functions do not change the provided value and give the same output always, when the same value is given multiple times.
+
+2.	what is Lazyloading ?
+It allows to load component asynchronously when a specific route is activated.
+3.	what is widget ?
+External module get components, directives and pipes from widget module.
+
+4.	If your data model is updated outside the ‘Zone’, explain the process how will you the view?
+You can update your view using any of the following:
+1.	ApplicationRef.prototype.tick(): It will perform change detection on the complete component tree.
+2.	NgZone.prototype.run(): It will perform the change detection on the entire component tree. Here, the run() under the hood will call the tick itself and then parameter will take the function before tick and executes it.
+3.	ChangeDetectorRef.prototype.detectChanges(): It will launch the change detection on the current component and its children.
+
+
+5.	Explain ng-app directive in Angular.
+ng-app directive is used to define Angular applications which let us use the auto-bootstrap in an Angular application. It represents the root element of an Angular application and is generally declared near <html> or <body> tag. Any number of ng-app directives can be defined within an HTML document but just a single Angular application can be officially bootstrapped implicitly. Rest of the applications must be manually bootstrapped. 
+
+6.	What is the process of inserting an embedded view from a prepared TemplateRef?
+@Component({
+    selector: 'app-root',
+    template: `
+        <ng-template #template let-name='fromContext'><div>{{name}}</ng-template>
+    `
+})
+export class AppComponent implements AfterViewChecked {
+    @ViewChild('template', { read: TemplateRef }) _template: TemplateRef<any>;
+    constructor() { }
+
+    ngAfterViewChecked() {
+        this.vc.createEmbeddedView(this._template, {fromContext: 'John'});
+    }
+}
+
+
+7.	How can you hide an HTML element just by a button click in angular?
+An HTML element can be easily hidden using the ng-hide directive in conjunction along with a controller to hide an HTML element on button click.
+View
+<div ng-controller="MyController">
+  <button ng-click="hide()">Hide element</button>
+  <p ng-hide="isHide">Hello World!</p>
+</div>
+Controller
+controller: function() {
+this.isHide = false;
+this.hide = function(){
+this.isHide = true; }; }
+
+
+8.	
+How to send an Http post request in AngularJS ?
+
+The $http.post method is used to send an http post request in AngularJS. The method has three parameters namely URL, data, config.
+
+9.	Explain $templateCache in AngularJs ?
+
+$templateCache is a Cache object that is created by the $cache factory. The first time you use a template, it is loaded in the $templateCache for easy and quick retrieval.
+
+
+
+10.	What is the difference between a unit and end-to-end (e2e) test in AngularJS ?
+
+AngularJS provides full support for both the unit and end-to-end testing.
+The unit testing is a method that helps the developers validate the isolated pieces of code and end-to-end testing is required when you want to ascertain the set of components integrated together work as you expect.
+
+
+11.	What is a Mocked Service in AngularJs? How to use it?
+
+It is the most common type of dependency on AngularJS application. A service can be mocked in two ways by either getting an instance of actual service using an inject block or by implementing a mock service using $provide.
+
+
+12.	How to implement caching in Angular 1.x?
+
+The caching is implemented by using a cache object that stores and retrieves data and is primarily used by $templaterequest and script directive to cache the templates.
+
+
+13.	What is the difference between ‘this’ vs $scope in AngularJS controllers?
+
+The $scope is an object with the available methods and properties. It is used to get all controls on the controller.JS files. It is available for both the controller and the view. "This" is the controller used when the controller’s constructor function is called.
+
+
+14.	What is the use of ng-cloak directive in AngularJS ?
+
+It is used to prevent the Angular HTML template from getting displayed briefly by the browser in its uncompiled form while the application is still loading. It is used to avoid the undesirable flicker effect caused by HTML template display.
+
+
+15.	 What are scopeless controller in AngularJS ? why to use them?
+
+Scopeless controllers have no $scope injected and the functions and properties are binded directly onto the controller. Scopeless controllers are used in the situation where the controller becomes complex by using the $scope to provide data.
+
+
+
+
+
+16.	 What is Isolate Scope in AngularJS and why it is required?
+
+It is a scope that exists separately with no prototypal inheritance. It makes the components reusable and permits to control the binding either one-way or two-way.
+
+
+
+17.	 What is the difference between $evalAsync and $timeout in AngularJS ?
+
+$evalAsync executes the expression on the current scope at a later time and makes no guarantees as to when the expression will be executed.
+$timeout also executes the expression on the current scope on later time but also runs after the DOM has been manipulated by the Angular and after the browser renders that cause flicker in some cases.
+
+
+18.	 How AngularJS is different from Jquery?
+
+AngularJS is a framework with key features like models, two-way binding, directives, routing, dependency injections, unit tests etc., whereas the Jquery is a library used for DOM manipulation with no two-way binding features.
+
+
+19.	What is different between ng routing and UI routing in AngularJS ?
+
+The ng routing is deep linking services and directives for angular applications whereas the UI routing is a 3rd party module routing and is very powerful. It does everything an ng router does as well as has many other extra functions.
+
+
+20.	How to disable a control or element in AngularJS ?
+
+Using ng-disabled attribute will help you disable element in AngularJS.
+
+
+
+21.	How to hide or show a div in AngularJS ?
+
+In order to hide/show the div in AngularJS just get rid of display: none, the rest is in the control. If you want to hide it by default then set the value of scope.myvalue to false.
+
+
+22.	List some Cons or disadvantages of using AngularJS ?
+
+Here is the list of cons of AngularJS
+•	JavaScript support mandatory
+Just be imaginative, the devices that access your server but they are disabled for JavaScript. So the users are unable to access your web apps or website. In the case of a great number of users, AngularJS based web is not so efficient. In spite of this, it is good for plain HTML-based web.
+•	Greenness with Model View Controller (MVC)
+If you are a developer and want to do some traditional with almost zilch knowledge of MVC then you are not advised to use the Angular.JS because it will be time-consuming for you. You should hire an expert who has good knowledge of MVC if you are short in time to submit the project
+•	The dilemma scopes
+If you are fresh in Angular.JS then it will be difficult for you to deal with complex entities such as Quite layered and hierarchically and scopes. Debugging the scope is believed a very hard task for many programmers.
+•	Other difficult features
+There are several features of Angular.JS like directives, dependency injection and factories which are hard to use. So, you have to spend a lot of time on it to understand all of them or prefer to hire an expert.
+•	Time consumption in old devices
+The browser on old computers and mobile are failed or take a little more time to render pages of application and websites designed using the framework. It happens because the browser begins to complete some supplementary tasks like DOM manipulation. But this quibble does not seem in the new devices.
+•	Difficult to learn
+It is very hard to accustom to the framework. Plus, you may get some additional problems like limited documentation. But Angular.JS continuously make it easier
+
+
+
+
+23.	Explain DDO in AngularJs ?
+
+DDO Stands for Directive Definition Object. DDO is used while creating a custom directive in AngularJs.
+
+
+24.	Explain the functionality angular.copy() method?
+
+It is used to allocating the value of an object into another object however the object value must not be altered.
+If you are adding any new property or altering any value of the property then the object noting to the same object will update by applying angular. Copy() method.
+
+25.	Which filter will be executed one or more times during the each $Digest cycle?
+
+$stateful filters are executed one or more times during each $Digest cycle. It is not recommended to write a $stateful filter in AngularJS.
+
+26.	What are the benefits of AngularJS?
+Benefits of AngularJS are:
+•	Registering Callbacks: There is no need to register callbacks. This makes your code simple and easy to debug.
+•	Control HTML DOM programmatically: Applications which are created using Angular are not required to manipulate the DOM.
+•	Transfer data to and from the UI: AngularJS helps to eliminate almost all of the boilerplate. It can validate the form, display errors, return to an internal model, and so on.
+•	No initialization code: With AngularJS, you can bootstrap your app easily. You can use auto injected services into your application in Guice.
+
+27.	Explain the styling form that ngModel adds to CSS classes
+NgModel adds these CSS classes to allow styling of form. Validation classes of AngularJS are:
+6.	ng- valid
+7.	ng- invalid
+8.	ng-pristine
+9.	ng-dirty
+
+
+28.	Explain the use of double click event in AngularJS
+double click event of AgularJS let you to specify custom behavior on double click event of mouse on a web page like:
+<ELEMENT ng-dblclick="{expression}"> 
+... 
+</ELEMENT>
+
+29.	 Why use ng-include in AngularJS?
+Ng-include in AngularJS helps you to embed HTML pages within a single HTML page. Example:
+<div ng-app = "" ng-controller = "interviewController">
+   <div ng-include = "'first.htm'"></div>
+   <div ng-include = "'phases.htm'"></div>
+</div>
+
+30.	Give an example of ng-view in Angular
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chrset="UTF 8">
+    <title>Event Registration</title>
+    <script src="https://code.angularjs.org/1.5.9/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.5.9/angular.min.js"></script>
+    <script src="/lib/bootstrap.js"></script>
+</head>
+<body ng-app="sampleApp">
+<h1> Global Event</h1>
+<div class="container">
+    <ul><li><a href="#!NewEvent"> Add New Event</a></li>
+        <li><a href="#!DisplayEvent"> Display Event</a></li>
+    </ul>
+    <div ng-view></div>
+</div>
+<script>
+    var app = angular.module('sampleApp',["ngRoute"]);
+    app.config(function($routeProvider){
+        $routeProvider.
+        when("/NewEvent",{
+            templateUrl : "add_event.html",
+            controller: "AddEventController"
+        }).
+        when("/DisplayEvent", {
+            templateUrl: "show_event.html",
+            controller: "ShowDisplayController"
+        }).
+        otherwise ({
+            redirectTo: '/DisplayEvent'
+        });
+    });
+    app.controller("AddEventController", function($scope) {
+        $scope.message = "This is to Add a new Event";
+    });
+    app.controller("ShowDisplayController",function($scope){
+        $scope.message = "This is display an Event";
+    });
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+30.	Name different phases of the AngularJS Scope lifecycle.
+Here, are different phases of AngularJS Scope lifecycle:
+•	Creation
+•	Model mutation
+•	Watcher registration
+•	Mutation observation
+•	Scope destruction
+
+
+
+
+31.	Explain the concept of webpack
+Webpack is a module bundler for Angular2 or above. It bundles, transpiles, and minifies AngularJS application.
+32.	Explain the auto bootstrap process in AngularJS
+Angular initializes automatically DOMContentLoaded event or when you download angular.js script is to the browser.
+After this, AngularJS find the ng-app directive that is the root of angular app compilation. When ng-app directive is found, AngularJS do the following steps:
+33.	What is immediately invoked function expressions?
+IIFEs or Immediately Invoked Function Expressions is a function that executes as soon as it is created. It offers a simple way to isolate the variable declaration. IIFEs contains two major functions:
+1) operator()
+2) expression()
+34.	What Are the Essential Building Blocks of Angular?
+Answer:
+The concept of Angular is based around Components, which is the first building block. Components follow tree structures where the App component is the root component. A component encapsulates the logic of the view, data, and the HTML mark-up. Every app must have at least one part. The more the parts of smaller sizes, the better is the readability of the code.
+Module, the second most crucial building block is a container that groups related components. The default module in an application is the app module. Blades should be small in size and have related components.
+35.	Mention Some of the Features of Angular
+Answer: Some important features are –
+•	Component-based architecture – applications are written as a set of independent components.
+•	Parts can be created, tested, integrated using Angular CLI.
+•	Great support for complex animations without writing much code.
+•	Because of the component router, Angular supports automatic code-splitting. Hence only the code required to render a particular view is loaded.
+•	Cross-platform application development.
+•	Template syntax for creating UI views.
+36.	What Are Directives in Angular?
+Answer: With directives, developers can write application-specific custom HTML syntax. The new language is written in the DOM, and the Angular compiler executes the directive functions when it finds a new HTML syntax. There are three types of directives – attribute, component, structural.
+37.	What Is the Primary Language Used in Angular?
+Answer: Angular is based on TypeScript and HTML. HTML is used for the template, and TypeScript (a superset of JavaScript) is used for components.
+38.	Which Is the Latest Version of Angular? What Are the New Features in It?
+Answer: The latest version is Angular 8. Some features are –
+•	Support for TypeScript 3.4.
+•	Dynamic import for lazy routes.
+•	Web workers.
+•	Differential loading for application code.
+•	Introduction of Angular Ivy – improved payload size, backward compatibility, faster re-build time, easier debugging etc…
+39.	What Is a Component?
+Answer: The component is a logical piece of code. The component consists of the template (that contains the HTML (or URL) that needs to be rendered), class (class that defines properties and methods that supports the view) and metadata (defined using decorator).
+Example –
+@Component ({ selector: 'my-app', template: ` <div> <h1>{{appTitle}}</h1>
+<div>What is your name?</div> </div>, })
+40.	Is It Possible to Create a Custom Pipe? How?
+Answer: Yes, we can create custom pipes.
+•	Pipe metadata @Pipe decorator can be imported from core Angular library
+•	Pipe is a class that is decorated with the above metadata (@Pipe({name: 'myCustomPipe'}))
+•	The next step is to define the transformation. For this, the pipe class should implement the method transform() of the PipeTransform class.
+•	Specify the pipe name in the main code
+<p>Size: {{number | myCustomPipe: 'Error'}}</p>
+41.	What Are the Special Transition States?
+Answer: Special transition states are wildcard (*) and void. Wildcard matches any animation state. The void state is used to configure transitions for elements entering or leaving a page.
+42.	Explain the Features of Forms in Angular.
+Answer: There are two approaches to handle form data (user inputs) – reactive and template-driven.
+Reactive forms can be used when you are using reactive patterns in your application and forms are a key part of your application. These forms are scalable, robust and testable.
+Template-driven forms are used to add simple forms, for example, a sign-up page. These are not as scalable as reactive forms and should be used only if your form requirements are simple and minimal.
+43.	Explain the Difference Between Annotations and Decorators in Angular
+Answer: Annotations are hardcoded features of Angular and store array in it. The compiler creates am attribute of the annotated class and instantiates an object of the same name, passing the metadata to the constructor.
+Decorators, on the other hand, are functions that receive the object to be decorated. After receiving, they are free to modify the object in the way it likes. Decorators are implemented by the TypeScript compiler.
+44.	What Does the Representation [()] Mean?
+Answer: This is a representation for ngModel used for two-way data binding. It is written as [(ngModel)] = “propertyvalue”.
+45.	Which One Is Better out of AOT and JIT?
+Answer: AOT reduces the load and bootstrap time of the application. The pages also load faster. Any errors are also shown during the time of application build itself. Hence, AOT is a better option.
+46.	Write a Sample Code to Create a Library
+Answer: You can use the Angular CLI for this. The following set of commands generates a new library skeleton –
+ng new my-workspace --create-application=false cd my-workspace
+ng generate library my-lib
+
+47.	what is @view child ?!
+It’s used to communicate data to child component from parent class using class name.
+
+48.	How to validate an URL in AngularJS ?
+
+Adding the regex directly to the ng pattern to the attribute can help you validate the URL in Angular JS.
+
+49.	 What is the difference between a stateful and stateless component in AngularJs ?
+
+A stateful component is a detail implementation of the component that can change over time and the stateful components can have stateless components inside them, while the stateless components are a plain JavaScript function
+50.	How logs are maintained in AngularJS?
+The follow-up question can be how to Blackbox AngularJS source in the browser and which all browser supports Blackbox?
+Logs are maintained with the help of $log service. The main purpose of this service is to help in debugging and troubleshooting. This is done with the help of four methods.
+1. log()-writes a log message in the console
+2. info()-writes an information message
+3. warn()-write a warning message
+4. error()-writes an error message
+5. debug()-writes a debug message
+

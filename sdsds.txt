@@ -1,0 +1,5 @@
+data types ,tuples,list,dictionary
+
+basic programs,even,odd,fibnoacci,reverse
+
+inheritance

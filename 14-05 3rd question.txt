@@ -1,0 +1,74 @@
+step 1:pip install python-chess
+step2: install pygame
+
+class Chess_Board:
+    def __init__(self):
+        self.board = self.create_board()
+  for x in range(8):
+            board_y =[]
+            for y in range(8):
+
+                board_y.append('.')
+
+            board_x.append(board_y)
+        board_x[7][4] = 'K'
+        board_x[7][3] = 'Q'
+        board_x[7][2] = 'B'
+        board_x[7][1] = 'N'
+        board_x[7][0] = 'R'
+        return board_x
+
+class WHITE_KING(Chess_Board):
+    def __init__(self):
+        Chess_Board.__init__(self)
+        self.position_x_WK = 7
+        self.position_y_WK = 4
+        self.symbol_WK = 'K'
+
+    def move(self):
+        while True:
+            try:
+                print ('give a x and y coordinate for WHITE KING')
+                destination_x_WK = int(input())
+                destination_y_WK = int(input())
+
+
+                if self.board[destination_x_WK][destination_y_WK] == '.' :
+
+                    if ( abs(self.position_x_WK-destination_x_WK) <2 and abs(self.position_y_WK-destination_y_WK) < 2 ):
+                        self.board[self.position_x_WK][self.position_y_WK] = '.'
+                        self.position_x_WK = destination_x_WK
+                        self.position_y_WK = destination_y_WK
+                        self.board[self.position_x_WK][self.position_y_WK] = self.symbol_WK
+
+                        return self.board
+                        break
+
+                    else:
+                        print ('your move is invalid, please choose cooridnates again')
+                        continue
+
+            except:
+                pass
+
+class Engine(Chess_Board):
+
+    def __init__(self):
+        WHITE_KING.__init__(self)
+
+ def play(self):
+        print('Please write what figure you choose to move: white_king, white_queen, white_rook, white_bishop'
+              'or white knight')
+
+        while True:
+            choice=str(input())
+            if  choice == 'white_king':
+                WHITE_KING.move(self)
+
+
+
+    def display(self):
+        for i in range (8):
+            for j in range (8):
+                print (self.board[i][j], end=' ')
+            print ()

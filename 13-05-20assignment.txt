@@ -1,0 +1,551 @@
+LEAP YEAR
+
+year = int(input("Enter a year: "))
+if (year % 4) == 0:
+   if (year % 100) == 0:
+       if (year % 400) == 0:
+           print("{0} is a leap year".format(year))
+       else:
+           print("{0} is not a leap year".format(year))
+   else:
+       print("{0} is a leap year".format(year))
+else:
+   print("{0} is not a leap year".format(year))
+
+
+output
+Enter a year: 2020
+2020 is a leap year
+
+-----------------------------------------------------
+
+odd or even
+
+number=int(input("enter a number"))
+if(number%2==0):
+    print("{0}is even".format(number))
+else:
+    print("{0} is odd".format(number))
+
+
+output
+
+enter a number 12
+12is even
+
+-------------------------------------------------------
+Pattern printing
+
+
+def pyramid(n):
+    for i in range(0,n):
+        for j in range(0,i+1):
+            print("* ",end="")
+        print("\r")
+n=5
+pyramid(n)
+
+output
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+-----------------------------------------------------------
+
+reverse string
+
+txt = "Hello World" [::-1]
+print(txt)
+
+output
+
+dlroW olleH
+
+
+------------------------------------------------------
+
+prime number
+
+
+num = int(input("Enter a number: "))  
+  
+if num > 1:  
+   for i in range(2,num):  
+       if (num % i) == 0:  
+           print(num,"is not a prime number")  
+           print(i,"times",num//i,"is",num)  
+           break  
+   else:  
+       print(num,"is a prime number")  
+         
+else:  
+   print(num,"is not a prime number")  
+
+output
+
+Enter a number: 5
+5 is a prime number
+
+-------------------------------------------------------
+
+quadratic equation
+
+import cmath
+
+a = 1
+b = 5
+c = 6
+
+# calculate the discriminant
+d = (b**2) - (4*a*c)
+
+# find two solutions
+sol1 = (-b-cmath.sqrt(d))/(2*a)
+sol2 = (-b+cmath.sqrt(d))/(2*a)
+
+print('The solution are {0} and {1}'.format(sol1,sol2))
+
+
+output
+
+
+Enter a: 1
+Enter b: 5
+Enter c: 6
+The solutions are (-3+0j) and (-2+0j)
+
+
+
+
+
+
+
+
+dictionary
+
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"GOOGLE"}
+print(type(Employee))
+print("printing Employee data .... ")
+print(Employee)
+
+
+
+Nested loops
+
+
+n = int(input("Enter the number of rows you want to print?"))  
+i,j=0,0  
+for i in range(0,n):  
+    print()  
+    for j in range(0,i+1):  
+        print("*",end="")  
+
+
+OUTPUT
+*
+**
+***
+****
+*****
+
+
+
+tuples
+
+
+tuple1 = (10, 20, 30, 40, 50, 60)  
+print(tuple1)  
+count = 0  
+for i in tuple1:  
+    print("tuple1[%d] = %d"%(count, i));  
+
+
+(10, 20, 30, 40, 50, 60)
+tuple1[0] = 10
+tuple1[0] = 20
+tuple1[0] = 30
+tuple1[0] = 40
+tuple1[0] = 50
+tuple1[0] = 60
+
+
+
+
+
+SETS
+
+
+Days = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"}  
+print(Days)  
+print(type(Days))  
+print("looping through the set elements ... ")  
+for i in Days:  
+    print(i)  
+
+OUTPUT
+
+
+{'Friday', 'Tuesday', 'Monday', 'Saturday', 'Thursday', 'Sunday', 'Wednesday'}
+<class 'set'>
+looping through the set elements ... 
+Friday
+Tuesday
+Monday
+Saturday
+Thursday
+Sunday
+Wednesday
+
+
+
+FUNCTIONS
+
+def hello_world():  
+    print("hello world")  
+  
+hello_world()    
+
+
+def sum (a,b):  
+    return a+b;  
+  
+#taking values from the user  
+a = int(input("Enter a: "))  
+b = int(input("Enter b: "))  
+  
+#printing the sum of a and b  
+print("Sum = ",sum(a,b))  
+
+
+Output:
+
+Enter a: 10
+Enter b: 20
+Sum =  30
+
+
+
+
+Variable length Arguments
+
+
+def printme(*names):  
+    print("type of passed argument is ",type(names))  
+    print("printing the passed arguments...")  
+    for name in names:  
+        print(name)  
+printme("john","David","smith","nick")  
+
+
+
+
+Read CSV
+
+
+data = [{'Rank': 'B', 'first_name': 'Parker', 'last_name': 'Brian'},   
+{'Rank': 'A', 'first_name': 'Smith', 'last_name': 'Rodriguez'},  
+{'Rank': 'C', 'first_name': 'Tom', 'last_name': 'smith'},  
+{'Rank': 'B', 'first_name': 'Jane', 'last_name': 'Oscar'},   
+{'Rank': 'A', 'first_name': 'Alex', 'last_name': 'Tim'}] 
+
+import csv  
+   
+with open('Python.csv', 'w') as csvfile:  
+    fieldnames = ['first_name', 'last_name', 'Rank']  
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)  
+   
+    writer.writeheader()  
+    writer.writerow({'Rank': 'B', 'first_name': 'Parker', 'last_name': 'Brian'})  
+    writer.writerow({'Rank': 'A', 'first_name': 'Smith',  
+                     'last_name': 'Rodriguez'})  
+    writer.writerow({'Rank': 'B', 'first_name': 'Jane', 'last_name': 'Oscar'})  
+    writer.writerow({'Rank': 'B', 'first_name': 'Jane', 'last_name': 'Loive'})  
+   
+print("Writing complete")  
+
+OUtput:
+
+Writing complete
+
+
+Decorator
+
+
+def func1(msg):  
+    print(msg)  
+func1("Hii")  
+func2 = func1  
+func2("Hii")  
+
+
+
+
+
+ARRAYS
+
+
+
+import array as arr  
+numbers = arr.array('i', [1, 2, 3, 5, 7, 10])  
+   
+# changing first element  
+numbers[0] = 0     
+print(numbers)    # Output: array('i', [0, 2, 3, 5, 7, 10])  
+   
+# changing 3rd to 5th element  
+numbers[2:5] = arr.array('i', [4, 6, 8])    
+print(numbers)    # Output: array('i', [0, 2, 4, 6, 8, 10])  
+
+
+Output:
+
+array('i', [0, 2, 3, 5, 7, 10])
+array('i' ,[0, 2, 4, 6, 8, 10])
+
+How to delete elements from an array?
+
+
+import array as arr  
+number = arr.array('i', [1, 2, 3, 3, 4])  
+del number[2]                          
+print(number)  
+
+
+array('i', [10, 20, 40, 60])
+
+
+
+
+
+Non parameterized constructor
+
+class Student:    
+    # Constructor - non parameterized    
+    def __init__(self):    
+        print("This is non parametrized constructor")    
+    def show(self,name):    
+        print("Hello",name)    
+student = Student()    
+student.show("John") 
+
+OUTPUT
+This is non parametrized constructor
+Hello John
+
+
+
+
+Python Parameterized Constructor Example
+
+
+
+class Student:    
+    # Constructor - parameterized    
+    def __init__(self, name):    
+        print("This is parametrized constructor")    
+        self.name = name    
+    def show(self):    
+        print("Hello",self.name)    
+student = Student("John")    
+student.show()  
+
+
+
+
+
+
+next →← prev
+Python Inheritance
+Inheritance is an important aspect of the object-oriented paradigm. Inheritance provides code reusability to the program because we can use an existing class to create a new class instead of creating it from scratch.
+
+In inheritance, the child class acquires the properties and can access all the data members and functions defined in the parent class. A child class can also provide its specific implementation to the functions of the parent class. In this section of the tutorial, we will discuss inheritance in detail.
+
+In python, a derived class can inherit base class by just mentioning the base in the bracket after the derived class name. Consider the following syntax to inherit a base class into the derived class.
+
+
+Python Inheritance
+Syntax
+class derived-class(base class):  
+    <class-suite>   
+A class can inherit multiple classes by mentioning all of them inside the bracket. Consider the following syntax.
+
+Syntax
+class derive-class(<base class 1>, <base class 2>, ..... <base class n>):  
+    <class - suite>   
+Example 1
+class Animal:  
+    def speak(self):  
+        print("Animal Speaking")  
+#child class Dog inherits the base class Animal  
+class Dog(Animal):  
+    def bark(self):  
+        print("dog barking")  
+d = Dog()  
+d.bark()  
+d.speak()  
+Output:
+
+dog barking
+Animal Speaking
+Python Multi-Level inheritance
+Multi-Level inheritance is possible in python like other object-oriented languages. Multi-level inheritance is archived when a derived class inherits another derived class. There is no limit on the number of levels up to which, the multi-level inheritance is archived in python.
+
+Python Inheritance
+The syntax of multi-level inheritance is given below.
+
+Syntax
+class class1:  
+    <class-suite>   
+class class2(class1):  
+    <class suite>  
+class class3(class2):  
+    <class suite>  
+.  
+.  
+Example
+class Animal:  
+    def speak(self):  
+        print("Animal Speaking")  
+#The child class Dog inherits the base class Animal  
+class Dog(Animal):  
+    def bark(self):  
+        print("dog barking")  
+#The child class Dogchild inherits another child class Dog  
+class DogChild(Dog):  
+    def eat(self):  
+        print("Eating bread...")  
+d = DogChild()  
+d.bark()  
+d.speak()  
+d.eat()  
+Output:
+
+dog barking
+Animal Speaking
+Eating bread...
+Python Multiple inheritance
+Python provides us the flexibility to inherit multiple base classes in the child class.
+
+Python Inheritance
+The syntax to perform multiple inheritance is given below.
+
+Syntax
+class Base1:  
+    <class-suite>  
+  
+class Base2:  
+    <class-suite>  
+.  
+.  
+.  
+class BaseN:  
+    <class-suite>  
+  
+class Derived(Base1, Base2, ...... BaseN):  
+    <class-suite>  
+Example
+class Calculation1:  
+    def Summation(self,a,b):  
+        return a+b;  
+class Calculation2:  
+    def Multiplication(self,a,b):  
+        return a*b;  
+class Derived(Calculation1,Calculation2):  
+    def Divide(self,a,b):  
+        return a/b;  
+d = Derived()  
+print(d.Summation(10,20))  
+print(d.Multiplication(10,20))  
+print(d.Divide(10,20))  
+Output:
+
+30
+200
+0.5
+The issubclass(sub,sup) method
+The issubclass(sub, sup) method is used to check the relationships between the specified classes. It returns true if the first class is the subclass of the second class, and false otherwise.
+
+Consider the following example.
+
+Example
+class Calculation1:  
+    def Summation(self,a,b):  
+        return a+b;  
+class Calculation2:  
+    def Multiplication(self,a,b):  
+        return a*b;  
+class Derived(Calculation1,Calculation2):  
+    def Divide(self,a,b):  
+        return a/b;  
+d = Derived()  
+print(issubclass(Derived,Calculation2))  
+print(issubclass(Calculation1,Calculation2))  
+Output:
+
+True
+False
+The isinstance (obj, class) method
+The isinstance() method is used to check the relationship between the objects and classes. It returns true if the first parameter, i.e., obj is the instance of the second parameter, i.e., class.
+
+Consider the following example.
+
+Example
+class Calculation1:  
+    def Summation(self,a,b):  
+        return a+b;  
+class Calculation2:  
+    def Multiplication(self,a,b):  
+        return a*b;  
+class Derived(Calculation1,Calculation2):  
+    def Divide(self,a,b):  
+        return a/b;  
+d = Derived()  
+print(isinstance(d,Derived))  
+Output:
+
+True
+Method Overriding
+
+
+Example
+class Animal:  
+    def speak(self):  
+        print("speaking")  
+class Dog(Animal):  
+    def speak(self):  
+        print("Barking")  
+d = Dog()  
+d.speak()  
+Output:
+
+Barking
+
+
+
+
+
+Data abstraction
+
+
+class Employee:  
+    __count = 0;  
+    def __init__(self):  
+        Employee.__count = Employee.__count+1  
+    def display(self):  
+        print("The number of employees",Employee.__count)  
+emp = Employee()  
+emp2 = Employee()  
+try:  
+    print(emp.__count)  
+finally:  
+    emp.display()  
+
+OUTPUT
+
+
+The number of employees 2
+AttributeError: 'Employee' object has no attribute '__count'

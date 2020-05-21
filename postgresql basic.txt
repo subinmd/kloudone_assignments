@@ -1,0 +1,40 @@
+create database demo;
+
+
+CREATE TABLE employees(  
+   ID INT PRIMARY KEY     NOT NULL,  
+   NAME           TEXT    NOT NULL,  
+   AGE            INT     NOT NULL,  
+   ADDRESS        CHAR(50),  
+   SALARY         REAL  
+);  
+
+INSERT
+
+
+INSERT INTO "employees"("ID", "NAME", "AGE", "ADDRESS", "SALARY")  
+VALUES (1, 'Subin', 25, 'abcd ', 25000.00 ),(2, 'Amal', 21, 'dshhs', 35000.00); 
+
+SELECT
+
+
+SELECT "ID", "NAME", "SALARY","ADDRESS" FROM  "employees";  
+
+UPDATE
+
+UPDATE "employee"
+SET ID=1,"NAME"=ARUN,"SALARY"=25000;
+
+DELETE
+
+DELETE FROM "employees"  
+WHERE "ID" = 2;  
+
+
+DROP DATABASE demo;
+
+ 
+
+
+
+ 
