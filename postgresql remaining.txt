@@ -1,0 +1,94 @@
+CREATE VIEW COMPANY_VIEW AS
+SELECT ID, NAME, AGE
+FROM  COMPANY;
+
+SELECT * FROM COMPANY_VIEW
+
+OUTPUT
+
+
+ id | name  | age
+----+-------+-----
+  1 | Paul  |  32
+  2 | Allen |  25
+  3 | Teddy |  23
+  4 | Mark  |  25
+  5 | David |  27
+  6 | Kim   |  22
+  7 | James |  24
+
+
+
+DROP
+
+DROP VIEW view_name;
+
+
+
+
+LOCK
+
+
+
+LOCK [ employee ]
+name
+ IN
+lock_mode
+
+
+
+Subquery
+
+SELECT
+
+SELECT *
+   FROM COMPANY
+   WHERE ID IN (SELECT ID
+      FROM COMPANY
+      WHERE SALARY > 45000) ;
+
+INSERT INTO COMPANY_BKP
+   SELECT * FROM COMPANY
+   WHERE ID IN (SELECT ID
+      FROM COMPANY) ;
+
+
+UPDATE COMPANY
+   SET SALARY = SALARY * 0.50
+   WHERE AGE IN (SELECT AGE FROM COMPANY_BKP
+      WHERE AGE >= 27 );
+
+
+DELETE FROM COMPANY
+   WHERE AGE IN (SELECT AGE FROM COMPANY_BKP
+      WHERE AGE > 27 );
+
+
+CREATE TABLE COMPANY(
+   ID  SERIAL PRIMARY KEY,
+   NAME           TEXT      NOT NULL,
+   AGE            INT       NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+
+
+Foreign key Autoincrement
+
+create table users (
+    id serial not null primary key, 
+    user_name varchar(50)
+);
+
+create table playlists (
+    id serial not null primary key, 
+    user_id integer references users(id)
+);
+
+
+TIMESTAMP
+
+
+select age(timestamp '1957-06-13');
+
+
